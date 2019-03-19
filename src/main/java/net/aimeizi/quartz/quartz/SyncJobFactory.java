@@ -20,6 +20,7 @@ public class SyncJobFactory extends QuartzJobBean {
     /* 日志对象 */
     private static final Logger LOG = LoggerFactory.getLogger(SyncJobFactory.class);
 
+    @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
         LOG.info("SyncJobFactory execute");
         JobDataMap mergedJobDataMap = context.getMergedJobDataMap();

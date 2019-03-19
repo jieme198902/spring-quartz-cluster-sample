@@ -14,41 +14,89 @@ public class ScheduleJob extends Pageable {
 
     private static final long serialVersionUID = 4888005949821878223L;
 
-    /** 任务id */
-    private Long              scheduleJobId;
+    /**
+     * 任务id
+     */
+    private Long scheduleJobId;
 
-    /** 任务名称 */
-    private String            jobName;
+    /**
+     * 任务名称
+     */
+    private String jobName;
 
-    /** 任务别名 */
-    private String            aliasName;
+    /**
+     * 任务别名
+     */
+    private String aliasName;
 
-    /** 任务分组 */
-    private String            jobGroup;
+    /**
+     * 任务分组
+     */
+    private String jobGroup;
 
-    /** 触发器 */
-    private String            jobTrigger;
+    /**
+     * 触发器
+     */
+    private String jobTrigger;
 
-    /** 任务状态 */
-    private String            status;
+    /**
+     * 任务状态
+     */
+    private String status;
 
-    /** 任务运行时间表达式 */
-    private String            cronExpression;
+    /**
+     * 任务运行时间表达式
+     */
+    private String cronExpression;
 
-    /** 是否异步 */
-    private Boolean           isSync;
+    /**
+     * 是否异步
+     */
+    private Boolean isSync;
 
-    /** 任务描述 */
-    private String            description;
+    /**
+     * 任务描述
+     */
+    private String description;
 
-    /** 创建时间 */
-    private Date              gmtCreate;
+    /**
+     * 创建时间
+     */
+    private Date gmtCreate;
 
-    /** 修改时间 */
-    private Date              gmtModify;
+    /**
+     * 修改时间
+     */
+    private Date gmtModify;
 
-    /** 任务执行url */
-    private String            url;
+    /**
+     * 任务执行url
+     */
+    private String url;
+    /**
+     * 执行的作业类名
+     */
+    private String jobClass;
+    /**
+     * 执行的作业类里面的方法名
+     */
+    private String jobClassMethod;
+
+    public String getJobClassMethod() {
+        return jobClassMethod;
+    }
+
+    public void setJobClassMethod(String jobClassMethod) {
+        this.jobClassMethod = jobClassMethod;
+    }
+
+    public String getJobClass() {
+        return jobClass;
+    }
+
+    public void setJobClass(String jobClass) {
+        this.jobClass = jobClass;
+    }
 
     public Long getScheduleJobId() {
         return scheduleJobId;
@@ -161,6 +209,8 @@ public class ScheduleJob extends Pageable {
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModify=" + gmtModify +
                 ", url='" + url + '\'' +
+                ",jobClass='" + jobClass + '\'' +
+                ",jobClassMethod='" + jobClassMethod + '\'' +
                 '}';
     }
 }
